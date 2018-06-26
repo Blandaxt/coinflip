@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <button type="button" id="click" name="button">CLICK ME</button>
+    <span id="results"> You got:</span>
+    <script type="text/javascript" scr="coinflip.js">
+    // making a coint flip game
+    // the user can click a button that chooses heads or tails
+    // the user expects the dom to show head or tails
+    // we are hosting this localy
+      document.getElementById('click').onclick = click;
+      var heads = 0;
+      var tails =0;
+      function click(){
+      x = (Math.floor(Math.random() * 2) == 0);
+      if(x){
+        flip("heads");
+        console.log("heads")
+      }else{
+      flip("tails");
+      console.log("tails")
+
+      }
+    };
+    function flip(coin){
+      document.getElementById("results").innerHTML = coin;
+    };
+
+    </script>
+
+  </body>
+
+
+
+
+</html>
